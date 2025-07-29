@@ -27,7 +27,7 @@ a{
     text-decoration: none;
 }
 .container{
-    max-width: 1100px;
+    /* max-width: 1100px; */
     margin: auto;
     padding: 0 2rem ;
 }
@@ -341,20 +341,25 @@ header .header-content img{
     text-align: center;
 }
 @media(max-width:768px){
-    #home .navbar nav{
+    header .navbar nav{
         display: block;
         text-align: center;
     }
-    #home .navbar nav ul{
+    header .navbar nav ul{
         margin-top: 15px;
+        padding: 0;
     }
-    #home .navbar nav ul a{
-        margin: 0 8px;
+    header .navbar nav ul a{
+        margin: 0 5px;
     }
-    #home .header-content{
+    header .navbar nav ul a .ff{
+        margin-right:0 ;
+    }
+
+    header .header-content{
         grid-template-columns: 1fr;
     }
-    #home .header-content .content-text{
+    header .header-content .content-text{
         margin-bottom: 0rem;
         margin-top: 4rem;
     }
@@ -362,8 +367,18 @@ header .header-content img{
         max-width: 350px;
         margin:  auto;
     }
+    .container,
+    .header-content {
+        padding: 2rem ;
+        flex-direction: column; /* يخلي العناصر تتراص فوق بعض */
+        align-items: center;
+    }
      .header-content  h1{
         font-size: 50px;
+    }
+    #about{
+        padding-right: 0 ;
+        margin: 0;
     }
     #about .about-content,
     #contact .row{
@@ -376,16 +391,22 @@ header .header-content img{
     }
     #contact .row img{
         margin: auto;
+         width: 90%;
+         height: 80%;
+    }
+    form input{
+        /* padding-right: 5px; */
+        padding-right: 2px;
     }
 }
 @media(max-width:520px){
-    #home .header-content  h1{
+     .header-content  h1{
         font-size: 35px;
     }
-    #home .header-content p span,.tittle {
+     .header-content p span,.tittle {
         font-size: 16px;
     }
-    #home .header-content img {
+     .header-content img {
         margin-top: -6rem;
     }
     #about h2,
@@ -404,6 +425,22 @@ header .header-content img{
         grid-template-columns: 1fr;
     }
     #contact .row{
+       flex-direction: column;
         padding: 2rem 1rem;
     }
+} 
+    @media (max-width: 360px) {
+  .header-content h1 {
+    font-size: 22px;
+  }
+
+  .tittle,
+  .header-content p span {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
 }
